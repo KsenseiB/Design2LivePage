@@ -1,0 +1,91 @@
+/* defaults */
+/* =============================================== */
+
+a,
+a:link {
+  text-decoration: none;
+}
+
+/* modal */
+/* =============================================== */
+.modal-container {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 40%, 0.6);
+}
+.modal-container h3 {
+  font-size: 1.5rem;
+}
+
+.hidden-modal {
+  display: none;
+}
+.modal {
+  color: #fff;
+  background: #6bcf4ff3;
+  height: 200px;
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border: 1px rgb(202, 211, 190) solid;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.modal button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(145, 145, 145);
+  border: 3px;
+  padding: 5px;
+}
+.modal button:hover {
+  color: #6acf4f;
+}
+.modal button:active {
+  color: #6acf4f;
+  box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.46);
+  border: none;
+}
+.modal input {
+  padding: 3px;
+  width: 70%;
+}
+
+.btn-close {
+  cursor: pointer;
+  position: relative;
+  right: 10px;
+  align-self: flex-end;
+}
+
+/* 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: none;
+  place-content: center;
+  z-index: 1;
+}
+
+.modal ul li a {
+  display: block;
+  padding: 2em;
+  color: black;
+  font-size: 1.4em;
+  margin-left: -4em;
+} */

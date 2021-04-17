@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mister blogin</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
+    <header class="main-header">
+        <div class="nav-container container flex space-between align-center">
+            <div class="logo">Blogin</div>
+            <ul class="main-nav flex justify-content align-center clean-list">
+                <li><a class="flex justify-content align-center active"
+                        href="#">Journal</a></li>
+                <li><a class="flex justify-content align-center"
+                        href="#">About</a></li>
+                <li><a class="flex justify-content align-center"
+                        href="#">Work</a></li>
+                <li><a class="flex justify-content align-center"
+                        href="#">Contact</a></li>
+            </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="main-content container card-container">
+
+        <div class="card flex">
+            <img class="card-image" src="https://picsum.photos/300/200" alt="">
+            <div class="card-info flex-column ">
+                <h2 class="card-title">The perfect weekend getaway</h2>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et
+                </p>
+                <button class="card-btn btn-round"
+                    onclick="openModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img class="card-image" src="https://picsum.photos/300/200" alt="">
+            <div class="card-info flex-column ">
+                <h2 class="card-title">The perfect weekend getaway</h2>
+
+                <p class="card-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <button class="card-btn btn-round"
+                    onclick="openModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img class="card-image" src="https://picsum.photos/300/200" alt="">
+            <div class="card-info flex-column space-between">
+                <h2 class="card-title">The perfect weekend getaway</h2>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et
+                </p>
+
+                <button class="card-btn btn-round"
+                    onclick="openModal()">Continue Reading</button>
+            </div>
+        </div>
+
+        <div class="pg-nav flex space-between container">
+            <a class="btn-prev">&#8592; Previous</a>
+            <a class="btn-next">Next &#8594;</a>
+        </div>
+
+
+    </main>
+
+    <div class="modal-container flex hidden-modal">
+        <div class="modal flex">
+            <div class="btn-close" onclick="closeModal('x')">&#10005;</div>
+            <h3>Join us to get access to the latest
+                stories!
+            </h3>
+            <input type="email" name="email" placeholder="email...">
+            <button type="submit" class="email-submit"
+                onclick="closeModal('submit')">Submit</button>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div
+            class="footer-container container flex flex-column space-between align-center">
+            <div class="footer-logo logo">Blogin</div>
+            <div class="copy-right">
+                <small>&copy; <span class="year"></span> Blogin.com - All Rights
+                    Reserved - Find more free
+                    Templates at <a class="footer-link"
+                        href="https://pixelhint.com">Pixelhint.com</a>
+                </small>
+            </div>
+            <div class="social-media">
+                <ul class="social-nav flex clean-list">
+                    <li><a class="fa fa-facebook" href="#"></a></li>
+                    <li><a class="fa fa-twitter" href="#"></a></li>
+                    <li><a class="fa fa-instagram" href="#"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        let elModal = document.querySelector('.modal-container');
+        function openModal() {
+            elModal.classList.remove('hidden-modal');
+
+        }
+        function closeModal(el) {
+            if (el === 'x') elModal.classList.add('hidden-modal');
+            if (el === 'submit') elModal.classList.add('hidden-modal');
+        }
+
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+
+        document.querySelector(".year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
